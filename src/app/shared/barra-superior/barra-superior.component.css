@@ -1,0 +1,16 @@
+.bg-light {
+    opacity: 0.8;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(67, 119, 169, 0.3);
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.mr-auto,
+.mx-auto {
+    margin-left: auto!important;
+    margin-right: 0 !important;
+}

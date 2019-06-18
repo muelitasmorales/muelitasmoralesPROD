@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/foto.jpg" width="70" height="70">
+        <span style="font-family: Brush Script MT, Brush Script Std, cursive; font-size: 1.5rem">Dra. Claudia Morales</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" [routerLink]="['/']" routerLinkActive="active" skipLocationChange>
+                <a class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item" [routerLink]="['/noticias']" routerLinkActive="active" skipLocationChange>
+                <a class="nav-link">Noticias</a>
+            </li>
+            <li class="nav-item" [routerLink]="['/servicios']" routerLinkActive="active" skipLocationChange>
+                <a class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item" [routerLink]="['/contactenos']" routerLinkActive="active" skipLocationChange>
+                <a class="nav-link">Contáctenos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
