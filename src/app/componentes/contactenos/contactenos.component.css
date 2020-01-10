@@ -1,0 +1,18 @@
+h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.col-sm {
+    text-align: center;
+}
+
+img {
+    height: 30%;
+    width: 15%;
+}
+
+agm-map {
+    height: 300px;
+}

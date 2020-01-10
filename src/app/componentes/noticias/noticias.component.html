@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Noticias</h2>
+    <div [routerLink]="['/crearNoticia']">
+        <i class="material-icons agregar-noticia">add_circle_outline</i>
+    </div>
+    <br>
+    <div *ngIf="!mostarDetalle">
+        <ul>
+            <li *ngFor="let noticia of noticias; let i = index">
+                <span></span>
+                <div>
+                    <div class="titulo">{{noticia.Tema}}</div>
+                    <div class="info">{{noticia.Descripcion | slice: 0:500}}...</div>
+                    <div class="type"><button type="button" class="btn btn-primary" (click)="mostrarDetalle(i)">Continuar leyendo</button></div>
+                </div> <span class="number"><span>{{noticia.Fecha}}</span> <span></span></span>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="mostarDetalle">
+        <h2>{{noticia.Tema}}</h2><br>
+        <p>
+            {{noticia.Descripcion}}
+        </p>
+        <iframe *ngIf="noticia.Video != null" [src]="noticia.Video | videoYoutube" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <div *ngIf="noticia.Imagenes != null">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let imagen of noticia.Imagenes">
+                    <div class="card mb-4 shadow-sm">
+                        <img [src]="imagen">
+                        <!-- <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" (click)="mostrarDetalle()">Regresar a las noticias</button>
+    </div>
+</div>

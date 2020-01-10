@@ -1,0 +1,53 @@
+.barra {
+    position: fixed;
+    bottom: 0 !important;
+    width: 100% !important;
+    background-color: #f8f9fa;
+    border-top-style: solid;
+    border-top-color: rgba(67, 119, 169, 0.3);
+    opacity: 1;
+}
+
+.texto {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: left;
+    padding-left: 6%;
+    font-size: 0.9rem;
+    ;
+}
+
+.texto_copy {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+    padding-left: 6%;
+    font-size: 0.9rem;
+    ;
+}
+
+.redes>a>img,
+.youtube,
+.facebook,
+.instagram {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+}
+
+.youtube {
+    right: 6%;
+    width: 8%;
+}
+
+.facebook {
+    right: 15%;
+    width: 8%;
+}
+
+.instagram {
+    right: 25%;
+    top: 5%;
+    bottom: 5%;
+    width: 8%;
+}

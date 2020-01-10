@@ -1,0 +1,85 @@
+<div class="container">
+    <h2>Crear noticia</h2><br>
+    <form>
+        <div class="row">
+            <div class="col-sm">
+                <label for="tema">Tema</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="material-icons">title</i></span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="tema">
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <label for="tipo">Tipo multimedia</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="material-icons">attach_file</i></span>
+                    </div>
+                    <select class="custom-select" [(ngModel)]="noticia.Tipo" name="tipo">
+                        <option value="0" selected>Seleccione</option>
+                        <option value="1">Imágenes</option>
+                        <option value="2">Video</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-sm" *ngIf="noticia.Tipo == 2">
+                <label for="tema">Youtube URL</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="material-icons">video_library</i></span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="tema">
+                </div>
+            </div>
+
+            <div class="col-sm" *ngIf="noticia.Tipo == 1">
+                <label for="tema">Seleccione imagen</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="material-icons">perm_media</i></span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="archivo" accept="image/*" (change)="obtenerBase64($event)">
+                        <label class="custom-file-label" for="archivo" aria-describedby="inputGroupFileAddon02">Seleccione</label>
+                    </div>
+                    <div class="input-group-append" style="margin-left: -51px; z-index: 1;">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="material-icons">add_photo_alternate</i></span>
+                    </div>
+
+                    <!-- <div class="input-group-append" style="border-left: 1px solid white;">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="material-icons">control_point</i></span>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <label for="mensaje">Descripción</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="material-icons">description</i></span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea" name="mensaje"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" *ngFor="let imagen of noticia.Imagenes">
+                <div class="card mb-4 shadow-sm">
+                    <img [src]="imagen">
+                </div>
+            </div>
+        </div>
+    </form><br><br>
+</div>

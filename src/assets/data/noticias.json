@@ -2,16 +2,24 @@
         "Id": 1,
         "Fecha": "12-01-2019",
         "Tema": "Cuidados básicos de la ortodoncia",
-        "Descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex optio excepturi illo magni expedita nam sit vel neque dolores quasi ullam odit ad doloremque, architecto dolorem nesciunt, reiciendis voluptate.",
-        "Imagen": null,
+        "Descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Imagenes": null,
         "Video": "o7RoAiKB7Xc"
     },
     {
         "Id": 2,
         "Fecha": "01-05-2018",
         "Tema": "Aseo",
-        "Descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ex optio excepturi illo magni expedita nam sit vel neque dolores quasi ullam odit ad doloremque, architecto dolorem nesciunt, reiciendis voluptate.",
-        "Imagen": null,
+        "Descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Imagenes": null,
         "Video": "cUEzqb40IUE"
+    },
+    {
+        "Id": 3,
+        "Fecha": "01-05-2017",
+        "Tema": "Lorem Ipsum",
+        "Descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Imagenes": ["assets/img/thumbnail.jpg", "assets/img/thumbnail.jpg", "assets/img/thumbnail.jpg", "assets/img/thumbnail.jpg", "assets/img/thumbnail.jpg"],
+        "Video": null
     }
 ]

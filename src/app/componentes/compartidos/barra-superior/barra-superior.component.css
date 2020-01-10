@@ -1,0 +1,40 @@
+.bg-light {
+    opacity: 1;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(67, 119, 169, 0.3);
+}
+
+.imgFoto {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 70px;
+    height: 70px;
+}
+
+.mr-auto,
+.mx-auto {
+    margin-left: 0!important;
+    margin-right: auto !important;
+}
+
+.nombre {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2.1rem;
+    margin-left: 6%;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(67, 120, 169, 1) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 1.2rem;
+}
+
+#menu ul li:hover {
+    border-bottom: 1px solid rgba(67, 120, 169, 1);
+}

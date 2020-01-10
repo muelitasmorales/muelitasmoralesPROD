@@ -1,34 +1,40 @@
+:root {
+    --primary-color: rgba(67, 119, 169, 1);
+    /*#4377a9 */
+    --secondary-color: #5A48E8;
+    /* --secondary-color: #C0CC3D; */
+}
+
 html * {
     font-family: Arial Narrow, sans-serif;
 }
 
 .bgLogin {
     position: fixed;
-    top: 17%;
-    left: 21%;
+    top: 0%;
+    left: 0%;
     right: 0;
     bottom: 0;
     z-index: -1;
     background-image: url(assets/img/logo.jpg);
+    /* background-image: url(assets/img/muelitas2.jpg); */
+    background-image: url(assets/img/muelitas_copy.jpg);
     background-color: white;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-attachment: fixed;
     opacity: .5;
 }
 
 .container {
     width: 100%;
     padding-top: 1%;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 3%;
-    margin-top: 0;
-    opacity: 0.8;
+    padding: 1% 1% 2% 1%;
+    margin: 3% auto;
+    opacity: 0.9;
     background-color: #fff;
     background-clip: border-box;
+    border-radius: 25px;
 }
 
 ul {
@@ -38,26 +44,39 @@ ul {
 
 li {
     text-align: left;
+    letter-spacing: 1.3px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
+p,
+label {
+    font-size: 1rem;
+    letter-spacing: 1.3px;
 }
 
-@media (max-height:800px) {
-    footer {
-        position: static;
-    }
+h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
 }
 
-.divLoading {
-    /* display: none; */
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba( 255, 255, 255, .8) url('assets/img/39.gif') 50% 50% no-repeat;
+
+/* Inicio Bootstrap */
+
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
+
+.btn-secondary {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.input-group-text {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: white;
+}
+
+
+/* Fin Bootstrap */

@@ -1,0 +1,135 @@
+.titulo {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.row {
+    margin-bottom: 35px;
+}
+
+.info {
+    text-align: justify !important;
+    font-size: 1rem;
+    ;
+}
+
+iframe {
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 55%;
+    height: 350px;
+}
+
+img {
+    width: 100%;
+    height: 225px;
+}
+
+.agregar-noticia {
+    color: var(--secondary-color);
+    position: absolute;
+    right: 11%;
+    top: 22%;
+    font-size: 2.4rem;
+}
+
+
+/* nuevo */
+
+.container ul {
+    margin: 0;
+    list-style: none;
+    position: relative;
+    padding: 1px 100px;
+    color: black;
+    font-size: 13px;
+}
+
+.container ul:before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed var(--primary-color);
+    ;
+}
+
+.container ul li {
+    position: relative;
+    margin-left: 30px;
+    padding: 14px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(67, 119, 169, 0.3), 0 2px 2px rgba(67, 119, 169, 0.3);
+}
+
+.container ul li:not(:first-child) {
+    margin-top: 60px;
+}
+
+.container ul li>span {
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    ;
+    left: -30px;
+    top: 0;
+    position: absolute;
+}
+
+.container ul li>span:before,
+.container ul li>span:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    ;
+    position: absolute;
+    background: #86b7e7;
+    left: -5px;
+    top: 0;
+}
+
+.container ul li span:after {
+    top: 100%;
+}
+
+.container ul li>div {
+    margin-left: 10px;
+}
+
+.container div .title,
+.container div .type {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.container div .info {
+    font-weight: 300;
+}
+
+.container div>div {
+    margin-top: 5px;
+}
+
+.container span.number {
+    height: 100%;
+}
+
+.container span.number span {
+    position: absolute;
+    font-size: 1rem;
+    left: -102px;
+    font-weight: bold;
+}
+
+.container span.number span:first-child {
+    top: -7px;
+}
+
+.container span.number span:last-child {
+    top: 100%;
+}

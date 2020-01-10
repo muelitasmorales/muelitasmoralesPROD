@@ -1,43 +1,46 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; 
 
 import { AppComponent } from './app.component';
-import { NoticiasService } from './services/noticias.service';
-// Módulos
-import { PagesComponent } from './pages/pages.component';
-import { BarraSuperiorComponent } from './shared/barra-superior/barra-superior.component';
-import { BarraInferiorComponent } from './shared/barra-inferior/barra-inferior.component';
-import { ContactenosComponent } from './pages/contactenos/contactenos.component';
-import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { PrincipalComponent } from './pages/principal/principal.component';
-import { ServiciosComponent } from './pages/servicios/servicios.component';
-import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
+import { PrincipalComponent } from './componentes/principal/principal.component';
 
-import { APP_ROUTES } from './app.routes';
+import { AgmCoreModule } from '@agm/core';
+
+// Componentes
+import { RUTAS } from '../app/componentes/index.routes';
+import { BarraSuperiorComponent } from './componentes/compartidos/barra-superior/barra-superior.component';
+import { BarraInferiorComponent } from './componentes/compartidos/barra-inferior/barra-inferior.component';
+import { NoticiasComponent } from './componentes/noticias/noticias.component';
+import { ServiciosComponent } from './componentes/servicios/servicios.component';
+import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
+import { CrearNoticiaComponent } from './componentes/noticias/crear-noticia/crear-noticia.component';
+
+// Servicios
+import { NoticiasService } from './services/noticias.service';
 import { VideoYoutubePipe } from './pipes/video-youtube.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, PagesComponent,
+    AppComponent,
+    PrincipalComponent,
     BarraSuperiorComponent,
     BarraInferiorComponent,
-    ContactenosComponent,
     NoticiasComponent,
-    PrincipalComponent,
     ServiciosComponent,
-    NopagefoundComponent,
-    VideoYoutubePipe
+    ContactenosComponent,
+    VideoYoutubePipe,
+    CrearNoticiaComponent
   ],
   imports: [
+    RouterModule.forRoot(RUTAS, {useHash: true}),
     BrowserModule,
-    APP_ROUTES,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCFY-VoWCam4TxWxwHOfr68lT-GGz6Uobk'
-    }),
-    HttpClientModule
+      apiKey: 'AIzaSyDVDq3WaLhyRiVDCV4tn8s3IdRsTROQnN0'
+    }), HttpClientModule, FormsModule, CommonModule
   ],
   providers: [NoticiasService],
   bootstrap: [AppComponent]

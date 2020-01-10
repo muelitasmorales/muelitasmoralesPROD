@@ -1,0 +1,26 @@
+.titulo {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: justify;
+}
+
+.row {
+    margin-bottom: 35px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.col-sm {
+    text-align: center;
+}
+
+p {
+    text-align: justify !important;
+}
+
+li {
+    font-size: 1.2rem;
+}

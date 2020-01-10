@@ -1,0 +1,51 @@
+.icons {
+    height: 30%;
+    width: 30%;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.col-sm {
+    text-align: center;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+
+/* Inicio Carousel */
+
+.carousel {
+    margin-left: auto;
+    position: relative;
+    width: 900px;
+    margin-right: auto;
+}
+
+.carousel-inner {
+    position: initial;
+    width: 900px;
+    overflow: hidden;
+    height: 243px !important;
+    margin-bottom: 3%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px 1px rgba(67, 120, 169, 1);
+}
+
+.carousel-caption {
+    h5 {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    bottom: 8px;
+}
+
+
+/* Fin Carousel */
