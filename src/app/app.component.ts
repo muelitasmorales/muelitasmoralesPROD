@@ -14,7 +14,7 @@ export class AppComponent {
   // se usa para hacer ping a la página cada 40 min y que no entre en sleep de Heroku
   ActivarHeroku(){    
     setInterval(() => {
-      this._generalSrv.ActivarHeroku();
-    }, 2400000);
+      this._generalSrv.activarHeroku();
+    }, 300000);
   }
 }

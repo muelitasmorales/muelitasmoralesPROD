@@ -18,10 +18,16 @@ import { NoticiasComponent } from './componentes/noticias/noticias.component';
 import { ServiciosComponent } from './componentes/servicios/servicios.component';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { CrearNoticiaComponent } from './componentes/noticias/crear-noticia/crear-noticia.component';
+import { AlertasComponent } from './componentes/compartidos/alertas/alertas.component';
 
 // Servicios
 import { NoticiasService } from './services/noticias.service';
+import { GeneralesService } from './services/generales.service';
 import { VideoYoutubePipe } from './pipes/video-youtube.pipe';
+
+// Ng Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +39,19 @@ import { VideoYoutubePipe } from './pipes/video-youtube.pipe';
     ServiciosComponent,
     ContactenosComponent,
     VideoYoutubePipe,
-    CrearNoticiaComponent
+    CrearNoticiaComponent,
+    AlertasComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(RUTAS, {useHash: true}),
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDVDq3WaLhyRiVDCV4tn8s3IdRsTROQnN0'
-    }), HttpClientModule, FormsModule, CommonModule
+    }), HttpClientModule, FormsModule, CommonModule,
+    NgbModule
   ],
-  providers: [NoticiasService],
+  providers: [NoticiasService, GeneralesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

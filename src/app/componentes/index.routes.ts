@@ -5,6 +5,7 @@ import { NoticiasComponent } from '../componentes/noticias/noticias.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
 import { CrearNoticiaComponent } from './noticias/crear-noticia/crear-noticia.component';
+import { LoginComponent } from './login/login.component';
 
 export const RUTAS: Routes = [
     { path: 'principal', component: PrincipalComponent },
@@ -12,6 +13,7 @@ export const RUTAS: Routes = [
     { path: 'servicios', component: ServiciosComponent },
     { path: 'contactenos', component: ContactenosComponent },
     { path: 'crearNoticia', component: CrearNoticiaComponent },
+    { path: 'ingresar', component: LoginComponent },
     { path: '', pathMatch: 'full', redirectTo: 'principal' },
     { path: '**', pathMatch: 'full', redirectTo: 'principal' }
 ];

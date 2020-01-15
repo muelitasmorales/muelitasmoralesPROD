@@ -1,3 +1,5 @@
+<app-alertas [tipo]="alerta.Tipo" [mensaje]="alerta.Mensaje" [mostrar]="alerta.Mostrar"></app-alertas>
+
 <div class="container">
     <h2>Contáctenos</h2><br>
     <div class="row">
@@ -8,31 +10,31 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="material-icons">group</i></span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre">
+                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" [(ngModel)]="contacto.Nombre">
                 </div>
                 <label for="correo">Correo electrónico</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="material-icons">email</i></span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Correo" aria-describedby="basic-addon1" name="correo">
+                    <input type="text" class="form-control" aria-label="Correo" aria-describedby="basic-addon1" name="correo" [(ngModel)]="contacto.Correo">
                 </div>
                 <label for="correo">Teléfono / Celular</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="material-icons">call</i></span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Telefono" aria-describedby="basic-addon1" name="telefono">
+                    <input type="text" class="form-control" aria-label="Telefono" aria-describedby="basic-addon1" name="telefono" [(ngModel)]="contacto.Telefono">
                 </div>
                 <label for="mensaje">Mensaje</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="material-icons">message</i></span>
                     </div>
-                    <textarea class="form-control" aria-label="With textarea" name="mensaje"></textarea>
+                    <textarea class="form-control" aria-label="With textarea" name="mensaje" [(ngModel)]="contacto.Mensaje"></textarea>
                 </div>
                 <br>
-                <button class="btn btn-primary">Enviar mensaje</button>
+                <button class="btn btn-primary" (click)="enviar(content)">Enviar mensaje</button>
             </form>
         </div>
         <div class="col-sm">
@@ -52,3 +54,18 @@
         </div>
     </div><br><br>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h2>Errores</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    <div class="modal-body">
+        <label>Antes de continuar debe corregir los siguientes errores:</label><br><br>
+        <ul>
+            <li *ngFor="let error of errores">{{error}}</li>
+        </ul>
+    </div>
+</ng-template>

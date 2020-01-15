@@ -1,3 +1,5 @@
+enum TipoNoticia { Imagenes = 1, Video = 2 }
+
 export class NoticiaModel {
     public Id: number;
     public Fecha: Date;
@@ -5,5 +7,6 @@ export class NoticiaModel {
     public Descripcion: string;
     public Imagenes: string[] = [];
     public Video: string;
-    public Tipo: number = 1;
+    public TiposNoticias = TipoNoticia;
+    public Tipo: number = this.TiposNoticias.Imagenes;
 }

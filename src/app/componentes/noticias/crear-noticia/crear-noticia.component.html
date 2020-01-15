@@ -1,3 +1,5 @@
+<app-alertas [tipo]="alerta.Tipo" [mensaje]="alerta.Mensaje" [mostrar]="alerta.Mostrar"></app-alertas>
+
 <div class="container">
     <h2>Crear noticia</h2><br>
     <form>
@@ -34,7 +36,7 @@
                         <span class="input-group-text" id="basic-addon1"><i
                                 class="material-icons">video_library</i></span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="tema">
+                    <input type="text" class="form-control" aria-label="Nombre" aria-describedby="basic-addon1" name="tema" [(ngModel)]="noticia.Video">
                 </div>
             </div>
 
@@ -48,15 +50,6 @@
                         <input type="file" class="custom-file-input" id="archivo" accept="image/*" (change)="obtenerBase64($event)">
                         <label class="custom-file-label" for="archivo" aria-describedby="inputGroupFileAddon02">Seleccione</label>
                     </div>
-                    <div class="input-group-append" style="margin-left: -51px; z-index: 1;">
-                        <span class="input-group-text" id="basic-addon1"><i
-                                class="material-icons">add_photo_alternate</i></span>
-                    </div>
-
-                    <!-- <div class="input-group-append" style="border-left: 1px solid white;">
-                        <span class="input-group-text" id="basic-addon1"><i
-                                class="material-icons">control_point</i></span>
-                    </div> -->
                 </div>
             </div>
 
@@ -75,11 +68,28 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4" *ngFor="let imagen of noticia.Imagenes">
+            <div class="col-md-4" *ngFor="let imagen of noticia.Imagenes; let i = index">
                 <div class="card mb-4 shadow-sm">
                     <img [src]="imagen">
                 </div>
+                <button class="btn btn-danger" (click)="eliminar(i)">Eliminar</button>
             </div>
         </div>
     </form><br><br>
+    <button class="btn btn-primary" (click)="publicarNoticia(content)">Publicar noticia</button>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h2>Errores</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    <div class="modal-body">
+        <label>Antes de continuar debe corregir los siguientes errores:</label><br><br>
+        <ul>
+            <li *ngFor="let error of errores">{{error}}</li>
+        </ul>
+    </div>
+</ng-template>
